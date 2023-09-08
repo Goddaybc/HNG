@@ -22,3 +22,16 @@ def get_data(slack_name: Optional[str] = None, track: Optional[str] = None):
     current_utc_time = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
 
     # Github repository information
+    github_repo_url = "https://github.com/Goddaybc/HNG"
+    github_file_url = "https://github.com/Goddaybc/HNG/blob/master/main.py"
+
+    response_data = {
+        "slack_name": slack_name,
+        "current_day": current_day,
+        "utc_time": current_utc_time,
+        "track": track,
+        "github_file_url": github_file_url,
+        "github_repo_url": github_repo_url,
+        "status_code": 200,
+    }
+    return response_data
